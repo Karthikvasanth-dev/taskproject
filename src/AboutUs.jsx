@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Home = ({ data }) => {
+const AboutUs = ({ data }) => {
   return (
     <div>
-      <h2>Home Component</h2>
+      <h2>About Us Component</h2>
       <Table data={data} />
     </div>
   );
@@ -30,4 +30,5 @@ const Table = ({ data }) => (
   </table>
 );
 
-export default Home;
+export default AboutUs;
+  

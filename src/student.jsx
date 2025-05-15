@@ -1,12 +1,35 @@
 import React from 'react';
-import './index.css';
 
-const Student = () => {
+const Student = ({ data }) => {
+  const studentData = data.filter(item => item.role === 'Student');
+
   return (
-    <div className="page student-page">
-      <h1>Student Section</h1>
+    <div>
+      <h2>Student Component</h2>
+      <Table data={studentData} />
     </div>
   );
 };
+
+const Table = ({ data }) => (
+  <table border="1" cellPadding="5">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      {data.map((item) => (
+        <tr key={item.id}>
+          <td>{item.id}</td>
+          <td>{item.name}</td>
+          <td>{item.role}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+);
 
 export default Student;

@@ -1,20 +1,33 @@
-import React from 'react'
+import React from 'react';
 
-const Teacher = (props) => {
+const Teacher = ({ data }) => {
   return (
     <div>
-<table>
-    <tr>
-        <th>Name</th>
-        <td>{props.name}</td></tr>
-        <tr><th>Age</th>
-        <td>{props.age}</td></tr>
-        <tr><th>Exp</th>
-        <td>{props.Exp}</td></tr>
-    
-</table>
+      <h2>Teacher Component</h2>
+      <Table data={data.filter(item => item.role === 'Teacher')} />
     </div>
-  )
-}
+  );
+};
 
-export default Teacher
+const Table = ({ data }) => (
+  <table border="1" cellPadding="5">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      {data.map((item) => (
+        <tr key={item.id}>
+          <td>{item.id}</td>
+          <td>{item.name}</td>
+          <td>{item.role}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+);
+
+export default Teacher;
