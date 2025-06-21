@@ -1,14 +1,12 @@
-/* src/pages/Shop.css */
-
 .shop-page {
   font-family: Arial, sans-serif;
 }
 
-.shop-banner .overlay {
+.shop-banner  {
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5); /* Dim black overlay */
+  background-color: rgba(0, 0, 0, 0.5); 
   padding: 50px 20px;
-  width: 100%;
+  width: 1477px;
   height: 100%;
   position: absolute;
   top: 0;
@@ -30,3 +28,14 @@
 .separator {
   margin: 0 5px;
 }
+.breadcrumb-link {
+  color: white;
+  text-decoration: none; 
+  cursor: pointer;
+}
+
+.breadcrumb-link:hover {
+  color: #ffcccb; 
+  text-decoration: none; 
+}
+

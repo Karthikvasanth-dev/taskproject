@@ -1,0 +1,18 @@
+.food-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 15px;
+}
+.food-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+.food- {
+  text-decoration: none;
+  color: inherit;
+}

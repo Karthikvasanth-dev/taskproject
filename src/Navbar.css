@@ -1,0 +1,126 @@
+/* === Font for Navbar === */
+.nav-links a {
+  font-family: 'Dela Gothic One', sans-serif !important;
+}
+
+
+
+/* === Top Bar (keeps default font) === */
+.top-bar {
+  background-color: #111;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  font-size: 14px;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+.left-info{
+  margin-left: 150px;
+}
+.left-info span {
+  margin-right: 20px;
+  display: inline-flex;
+  align-items: center;
+}
+.right-icons{
+  margin-right: 100px;
+  font-size: 16px;
+}
+.left-info .icon {
+  margin-left: 15px;
+}
+
+.right-icons svg {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+/* === Main Navbar === */
+.main-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo {
+  height: 60px;
+  margin-left: 150px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+ font-size: 16px;
+ font-style: normal;
+ font-weight: 400;
+ float: none;
+ margin-right: 150px;
+}
+
+.nav-links span {
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-icons .icon {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.cart-icon {
+  color: #c4002f;
+}
+
+.cart-text {
+  font-weight: bold;
+  color: #000;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  padding: 0 12px;
+}
+
+.nav-links a:hover {
+  text-decoration: none;
+  color: #ff4d4d;
+}
+
+/* === Cart Sidebar === */
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  padding: 20px;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.cart-sidebar h3 {
+  margin-bottom: 10px;
+}
+
+.cart-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-sidebar li {
+  margin-bottom: 8px;
+}
