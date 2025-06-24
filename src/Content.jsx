@@ -13,7 +13,7 @@ const Content = () => {
     <div className="content">
       {/* Hero Section */}
       <section className="hero">
-        <img src="Screenshot 2025-06-07 125016.png" alt="Foodizo Logo" className="hero-logo" />
+        <img src="newcenter.png" alt="Foodizo Logo" className="hero-logo" />
         <h1 className="hero-title">Fast Food Restaurant<br />WordPress Theme</h1>
         <button className="hero-button" onClick={handlePurchaseClick}>
           PURCHASE NOW
