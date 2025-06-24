@@ -1,22 +1,22 @@
-.footer {
-  background-color: #1f2937;
+/* === Base Footer Wrapper === */
+footer {
+  background-color: #1a1a1a;
   color: white;
   position: relative;
+  font-family: Arial, sans-serif;
 }
 
+/* === Newsletter Section (Red Floating Box) === */
 .newsletter-section {
-  background-color: #dc2626;
+  background-color: #c00a27;
   padding: 2rem 1.5rem;
-  border-radius: 1.5rem 1.5rem 0 0;
-  margin: 0 1rem;
+  border-radius: 1.5rem;
+  margin: 0 auto;
   position: relative;
-  margin-bottom: -1rem;
-}
-
-@media (min-width: 1024px) {
-  .newsletter-section {
-    margin: 0 2rem;
-  }
+  max-width: 1100px;
+  top: -50px;
+  z-index: 1;
+  font-family: 'Dela Gothic One', sans-serif;
 }
 
 .newsletter-container {
@@ -46,77 +46,64 @@
 }
 
 .newsletter-heading {
-  font-size: 1.875rem;
+  font-size: 2.25rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
+  color: white;
 }
 
-@media (min-width: 1024px) {
-  .newsletter-heading {
-    font-size: 2.25rem;
-  }
-}
-
+/* === Newsletter Input Rounded Box === */
 .newsletter-form {
   display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
   width: 100%;
-}
-
-@media (min-width: 640px) {
-  .newsletter-form {
-    flex-direction: row;
-  }
-}
-
-@media (min-width: 1024px) {
-  .newsletter-form {
-    width: auto;
-  }
+  max-width: 600px;
+  border-radius: 9999px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .newsletter-input {
-  padding: 0.75rem 1.5rem;
-  border-radius: 9999px;
-  color: #1f2937;
-  min-width: 300px;
+  flex: 1;
+  padding: 1rem 1.5rem;
   border: none;
   outline: none;
-}
-
-.newsletter-input:focus {
-  outline: 2px solid white;
-  outline-offset: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 1rem;
 }
 
 .newsletter-input::placeholder {
-  color: #6b7280;
+  color: #f3f4f6;
 }
 
 .newsletter-button {
   background-color: white;
-  color: #dc2626;
-  padding: 0.75rem 2rem;
-  border-radius: 9999px;
-  font-weight: bold;
+  color: #c00a27;
+  font-weight: 700;
+  padding: 1rem 2rem;
   border: none;
+  font-size: 0.95rem;
   cursor: pointer;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-radius: 1rem;
   white-space: nowrap;
-  transition: background-color 0.2s;
+  transition: background-color 0.3s;
 }
 
 .newsletter-button:hover {
   background-color: #f3f4f6;
 }
 
+/* === Main Footer Grid === */
 .main-footer {
-  padding: 4rem 1.5rem 2rem;
+  padding: 6rem 1.5rem 2rem;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 @media (min-width: 1024px) {
   .main-footer {
-    padding: 4rem 2rem 2rem;
+    padding: 6rem 2rem 2rem;
   }
 }
 
@@ -124,16 +111,11 @@
   max-width: 80rem;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
 }
 
-@media (min-width: 1024px) {
-  .footer-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
+/* === Column 1: Company Info === */
 .company-info {
   grid-column: span 1;
 }
@@ -165,13 +147,14 @@
 .social-links {
   display: flex;
   gap: 0.75rem;
+  margin-top: 1rem;
 }
 
 .social-link {
   background-color: white;
   padding: 0.75rem;
   border-radius: 9999px;
-  color: #dc2626;
+  color: #c00a27;
   text-decoration: none;
   transition: background-color 0.2s;
 }
@@ -180,16 +163,24 @@
   background-color: #f3f4f6;
 }
 
+/* === Column 2: Footer Links === */
 .footer-section h4 {
   font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
 }
 
+.footer-link-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
 .footer-links {
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 .footer-links li {
@@ -206,27 +197,28 @@
 }
 
 .footer-link:hover {
-  color: #f87171;
+  color: #c00a27;
 }
 
 .footer-link-arrow {
-  color: #f87171;
+  color: #c00a27;
 }
 
-.hidden-heading {
-  opacity: 0;
-}
-
+/* === Column 3: Opening Hours === */
 .opening-hours {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  border-top: 1px solid #374151;
+  padding-top: 1rem;
 }
 
 .hours-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #374151;
+  padding-bottom: 0.5rem;
 }
 
 .hours-day {
@@ -237,15 +229,27 @@
   color: white;
 }
 
+/* === Bottom Copyright Bar === */
+.footer-bottom {
+  background-color: #c00a27;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.875rem;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+/* === Scroll to Top Button === */
 .scroll-to-top {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  background-color: #dc2626;
+  background-color: #c00a27;
   color: white;
   padding: 0.75rem;
   border-radius: 9999px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+              0 4px 6px -2px rgba(0, 0, 0, 0.05);
   border: none;
   cursor: pointer;
   z-index: 50;
@@ -253,9 +257,40 @@
 }
 
 .scroll-to-top:hover {
-  background-color: #b91c1c;
+  background-color: #a4081f;
 }
 
 .scroll-to-top:focus {
   outline: none;
+}
+
+/* === Logo Image === */
+.footer-logo-image {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  background-color: white;
+  padding: 0.25rem;
+}
+
+/* === Responsive Mobile Styles === */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-link-columns {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    border-radius: 1rem;
+  }
+
+  .newsletter-button {
+    border-radius: 1rem;
+  }
 }
