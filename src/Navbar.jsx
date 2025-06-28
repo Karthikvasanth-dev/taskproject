@@ -31,7 +31,7 @@ const Navbar = () => {
           <nav className="nav-links">
             <Link to="/">Home</Link>
             <Link to="/pages">Pages</Link>
-            <Link to="/menu">Our Menu</Link>
+            <Link to="/our-menu">Our Menu</Link> {/* ✅ Corrected path */}
             <Link to="/shop">Shop</Link>
             <Link to="/blog">Blog</Link>
             <Link to="/contact-us">Contact Us</Link>

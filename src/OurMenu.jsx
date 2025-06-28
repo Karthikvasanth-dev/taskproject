@@ -1,14 +1,13 @@
-// src/pages/Shop.jsx
+// src/OurMenu.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import FoodList from '../FoodList';
-import './Shop.css';
+import './Pages.css';
 
-const Shop = () => {
+const OurMenu = () => {
   return (
-    <div className="shop-page">
+    <div className="ourmenu-page">
       <div
-        className="shop-banner"
+        className="pages-banner"
         style={{
           backgroundImage: "url('/bg.png')",
           backgroundSize: 'cover',
@@ -23,20 +22,20 @@ const Shop = () => {
           textAlign: 'center',
         }}
       >
-        <div className="shop-overlay">
-          <h1>Products</h1>
-          <div className="breadcrumb">
-            <span className="home-icon">🏠</span>
-            <Link to="/" className="breadcrumb-link">Home</Link>
-            <span className="separator">›</span>
-            <span>Product</span>
-          </div>
+        <h1>Our Menu</h1>
+        <div className="breadcrumb">
+          <span className="home-icon">🏠</span>
+          <Link to="/" className="breadcrumb-link">Home</Link>
+          <span className="separator">›</span>
+          <span>Our Menu</span>
         </div>
       </div>
 
-      <FoodList />
+      <div className="pages-content">
+        <p></p>
+      </div>
     </div>
   );
 };
 
-export default Shop;
+export default OurMenu;

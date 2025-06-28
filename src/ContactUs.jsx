@@ -1,14 +1,13 @@
-// src/pages/Shop.jsx
+// src/ContactUs.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import FoodList from '../FoodList';
-import './Shop.css';
+import './Pages.css';
 
-const Shop = () => {
+const ContactUs = () => {
   return (
-    <div className="shop-page">
+    <div className="contactus-page">
       <div
-        className="shop-banner"
+        className="pages-banner"
         style={{
           backgroundImage: "url('/bg.png')",
           backgroundSize: 'cover',
@@ -23,20 +22,20 @@ const Shop = () => {
           textAlign: 'center',
         }}
       >
-        <div className="shop-overlay">
-          <h1>Products</h1>
-          <div className="breadcrumb">
-            <span className="home-icon">🏠</span>
-            <Link to="/" className="breadcrumb-link">Home</Link>
-            <span className="separator">›</span>
-            <span>Product</span>
-          </div>
+        <h1>Contact Us</h1>
+        <div className="breadcrumb">
+          <span className="home-icon">🏠</span>
+          <Link to="/" className="breadcrumb-link">Home</Link>
+          <span className="separator">›</span>
+          <span>Contact Us</span>
         </div>
       </div>
 
-      <FoodList />
+      <div className="pages-content">
+        <p></p>
+      </div>
     </div>
   );
 };
 
-export default Shop;
+export default ContactUs;

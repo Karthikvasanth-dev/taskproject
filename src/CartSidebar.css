@@ -1,4 +1,3 @@
-/* src/CartSidebar.css */
 .cart-sidebar {
   position: fixed;
   top: 0;
@@ -7,9 +6,11 @@
   height: 100%;
   background: white;
   box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
-  padding: 20px;
   transition: right 0.3s ease;
   z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .cart-sidebar.open {
@@ -28,8 +29,10 @@
 
 .cart-sidebar ul {
   list-style: none;
-  padding: 0;
+  padding: 60px 20px 20px; /* top padding for close button space */
   margin: 0;
+  flex: 1 1 auto;
+  overflow-y: auto;
 }
 
 .cart-sidebar li {
@@ -46,17 +49,44 @@
 }
 
 .cart-sidebar .subtotal {
-  margin-top: 20px;
+  position: sticky;
+  bottom: 0;
+  background: white;
+  padding: 10px 20px 30px; /* increased bottom padding for visible white space */
+  border-top: 1px solid #ddd;
+  flex-shrink: 0;
+  z-index: 10;
 }
+
+
+
+.cart-sidebar .buttons {
+  position: sticky;
+  bottom: 0;
+  padding: 10px 20px 40px; /* increased bottom padding from 20px to 40px */
+  border-top: 1px solid #ddd;
+  background: white;
+  flex-shrink: 0;
+}
+
 
 .cart-sidebar .view-cart,
 .cart-sidebar .checkout {
   display: block;
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin-top: 10px;
   background: red;
   color: white;
   border: none;
   cursor: pointer;
+  border-radius: 4px;
+}
+
+
+/* Ensure buttons always visible */
+.cart-sidebar .buttons {
+  position: sticky;
+  bottom: 0;
+  
 }

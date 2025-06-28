@@ -22,7 +22,7 @@ const Footer = () => {
         <div className="newsletter-container">
           <div className="newsletter-title">
             <h2 className="newsletter-heading">
-              Welcome Treat First Order Offer
+              Welcome Treat First <br /> Order Offer
             </h2>
           </div>
           <form onSubmit={handleSubscribe} className="newsletter-form">

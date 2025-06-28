@@ -1,0 +1,39 @@
+/* src/Pages.css */
+
+.pages-page {
+  min-height: 600px;
+  background-color: white;
+}
+
+.pages-banner .breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.pages-banner .breadcrumb-link {
+  color: white;
+  text-decoration: none;
+}
+
+.pages-banner .breadcrumb-link:hover {
+  text-decoration: underline;
+}
+
+.pages-banner .separator {
+  font-weight: bold;
+}
+
+.pages-banner h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.pages-content {
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 18px;
+}

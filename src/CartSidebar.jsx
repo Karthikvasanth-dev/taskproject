@@ -8,8 +8,9 @@ const CartSidebar = () => {
   console.log(cartItems);
   
 
-  const totalPrice = cartItems.reduce(
-    (total, item) => Number(total) + Number(item.price) ,0);
+ const totalPrice = Math.round(
+  cartItems.reduce((total, item) => total + Number(item.price), 0)
+);
 
   return (
     <div className={`cart-sidebar ${isCartOpen ? 'open' : ''}`}>
